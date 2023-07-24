@@ -7,57 +7,79 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <Button x:Name="GetInstalledCards" Content="Get installed Cards" HorizontalAlignment="Left" VerticalAlignment="Top" Click="GetInstalledCards_Click"/>
-            <ListView x:Name="CardListView" HorizontalAlignment="Left" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Slot" DisplayMemberBinding="{Binding Slot}"/>
-                        <GridViewColumn Header="Card Type" DisplayMemberBinding="{Binding CardType}"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <TextBlock Text="Frequency: " />
-            <TextBlock x:Name="FrequencyValue" Text="No reading" />
-            <Button Name="StartFrequencyReading" Content="Start" Click="StartFrequencyReading_Click" />
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Column="0" Grid.Row="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <Button x:Name="GetInstalledCards" Content="Get installed Cards" HorizontalAlignment="Left" VerticalAlignment="Top" Click="GetInstalledCards_Click"/>
+                <ListView x:Name="CardListView" HorizontalAlignment="Left" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Slot" DisplayMemberBinding="{Binding Slot}"/>
+                            <GridViewColumn Header="Card Type" DisplayMemberBinding="{Binding CardType}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Frequency: " />
+                    <TextBlock x:Name="FrequencyValue" Text="No reading" />
+                </StackPanel>
+                <Button Name="StartFrequencyReading" Content="Start" Click="StartFrequencyReading_Click" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="44472A Dual 4-Channel VHF Switch"/>
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <local:RadioToggleButton Grid.Column="0" Content="00" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <local:RadioToggleButton Grid.Column="1" Content="01" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Common"/>
-                    <local:RadioToggleButton Grid.Column="3" Content="02" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <local:RadioToggleButton Grid.Column="4" Content="03" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <local:RadioToggleButton Grid.Column="0" Content="00" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="1" Content="01" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Common"/>
+                        <local:RadioToggleButton Grid.Column="3" Content="02" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="4" Content="03" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <local:RadioToggleButton Grid.Column="0" Content="10" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="1" Content="11" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Common"/>
+                        <local:RadioToggleButton Grid.Column="3" Content="12" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="4" Content="13" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                    </Grid>
                 </Grid>
-                <Grid Grid.Column="1" Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <local:RadioToggleButton Grid.Column="0" Content="10" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <local:RadioToggleButton Grid.Column="1" Content="11" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Common"/>
-                    <local:RadioToggleButton Grid.Column="3" Content="12" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                    <local:RadioToggleButton Grid.Column="4" Content="13" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
-                </Grid>
-                <Grid Grid.Column="0"  Grid.Row="1">
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="44476B Microwave Switch"/>
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
@@ -83,7 +105,7 @@
                         <local:RadioToggleButton Grid.Column="2" Content="01" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
                     </Grid>
                 </Grid>
-            </Grid>
-        </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
