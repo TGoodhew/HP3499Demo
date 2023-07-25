@@ -184,5 +184,10 @@ namespace HP3499
                 StartFrequencyReading.Content = "Stop";
             }
         }
+
+        private void OpenClosedContacts()
+        {
+
+        }
     }
 }
