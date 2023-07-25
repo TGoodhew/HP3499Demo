@@ -90,9 +90,9 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <local:RadioToggleButton Grid.Column="0" Content="02" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="0" Content="00" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
                         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Common"/>
-                        <local:RadioToggleButton Grid.Column="2" Content="04" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
+                        <local:RadioToggleButton Grid.Column="2" Content="01" Style="{StaticResource {x:Type ToggleButton}}" Checked="RadioToggleButton_Checked" Unchecked="RadioToggleButton_Unchecked" />
                     </Grid>
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
